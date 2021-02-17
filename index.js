@@ -13,9 +13,6 @@ inquirer.prompt([
     },
 
 
-//inputs go here 
-
-
 ]).then((response) => {
 
 
