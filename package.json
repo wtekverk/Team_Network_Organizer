@@ -1,0 +1,28 @@
+{
+  "name": "team_network_organizer",
+  "version": "1.0.0",
+  "description": "# 10 Object-Oriented Programming: Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtekverk/Team_Network_Organizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wtekverk/Team_Network_Organizer/issues"
+  },
+  "homepage": "https://github.com/wtekverk/Team_Network_Organizer#readme"
+}
