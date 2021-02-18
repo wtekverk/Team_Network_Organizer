@@ -11,3 +11,5 @@ const ManagerCard = (profile) => `
     <li class="list-group-item">${profile.officeNumber}</li>
   </ul>
 </div>`
+
+module.exports = ManagerCard

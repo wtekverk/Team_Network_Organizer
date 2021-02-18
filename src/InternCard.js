@@ -2,7 +2,7 @@ const InternCard = (profile) => `
 
 <div class="card" style="width: 18rem;">
   <div class="card-header">
-   Manager
+   Intern
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${profile.name}</li>
@@ -11,3 +11,5 @@ const InternCard = (profile) => `
     <li class="list-group-item">${profile.school}</li>
   </ul>
 </div>`
+
+module.exports = InternCard
