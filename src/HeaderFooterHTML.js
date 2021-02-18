@@ -16,7 +16,7 @@ const HeaderFooterHTML = (cards) =>
 <body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">${teamName}</span>
+            <span class="navbar-brand mb-0 h1">Team Organizer Page</span>
         </div>
     </nav>
 
