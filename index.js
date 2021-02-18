@@ -25,17 +25,3 @@ const InternCard = require('./src/InternCard');
 
 
 
-
-const File = wrapProfileCards(profileCards)
-
-function writeHTML(File) {
-
-    fs.writeFile('./dist/Team-Organizer.html', File, (err) => {
-      
-        if (err) throw err;
-
-      console.log('Great Job!');
-    });
-  };
-
-
