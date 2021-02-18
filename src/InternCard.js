@@ -5,10 +5,10 @@ const InternCard = (profile) => `
    Intern
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">${profile.name}</li>
-    <li class="list-group-item">${profile.id}</li>
-    <li class="list-group-item">${profile.email}</li>
-    <li class="list-group-item">${profile.school}</li>
+    <li class="list-group-item">${profile.getName()}</li>
+    <li class="list-group-item">${profile.getId()}</li>
+    <li class="list-group-item"><a href="mailto:${profile.getEmail()}">${profile.getEmail()}</a></li>
+    <li class="list-group-item">${profile.getSchool()}</li>
   </ul>
 </div>`
 

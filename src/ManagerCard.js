@@ -2,13 +2,13 @@ const ManagerCard = (profile) => `
 
 <div class="card" style="width: 18rem;">
   <div class="card-header">
-   Manager
+   Intern
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">${profile.name}</li>
-    <li class="list-group-item">${profile.id}</li>
-    <li class="list-group-item">${profile.email}</li>
-    <li class="list-group-item">${profile.officeNumber}</li>
+    <li class="list-group-item">${profile.getName()}</li>
+    <li class="list-group-item">${profile.getId()}</li>
+    <li class="list-group-item"><a href="mailto:${profile.getEmail()}">${profile.getEmail()}</a></li>
+    <li class="list-group-item">${profile.getOffice()}</li>
   </ul>
 </div>`
 
