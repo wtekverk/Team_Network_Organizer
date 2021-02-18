@@ -1,40 +1,21 @@
+
+//adding so files can be created 
 const fs = require('fs')
 
+//attaching inquirer 
 const inquirer = require('inquirer')
 
-const generateMarkdown = require('./lib/generateMarkdown')
-
-inquirer.prompt([
-
-    {
-        type: 'input',
-        message: 'What is you team name?',
-        name: 'teamName'
-    },
+//attaching classes 
+const Employee = require('./lib/Employee');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 
-]).then((response) => {
+//attaching constants that have the HTML for the cards for each member 
+const WrapperHTML = require('./src/HeaderFooterHTML');
+const ManagerCard = require('./src/ManagerCard');
+const EngineerCard = require('./src/EngineerCard');
+const InternCard = require('./src/InternCard');
 
 
-
-
-    const fileName = `${response.teamName}.html`;
-
-    fs.writeFile(fileName, generateMarkdown(response), (err, data) => {
-            if (err) {
-                console.log(err)
-            } else {
-                console.log('Great Job!')
-            }
-        }
-
-    )
-
-
-
-}).catch(function (err) {
-    if (err) {
-        console.log("I'm so sad an error occurred. Me broken :(")
-        console.log(err);
-    }
-})
