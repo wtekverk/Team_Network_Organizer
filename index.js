@@ -11,7 +11,7 @@ const Intern = require('./lib/Intern');
 
 
 //attaching constants that have the HTML for the cards for each teamMember 
-const WrapperHTML = require('./src/HeaderFooterHTML');
+const HeaderFooterHTML = require('./src/HeaderFooterHTML');
 const ManagerCard = require('./src/ManagerCard');
 const EngineerCard = require('./src/EngineerCard');
 const InternCard = require('./src/InternCard');
@@ -112,23 +112,30 @@ const addEngineer = [{
 
 ];
 
+//asks staring prompts for manager and then prompts the rest of the team from there
+runPrompts(addManager);
 
-ask(addManager);
 
+//defines the runPrompts function 
+function runPrompts(arr) {
 
-function ask(arr) {
-
+  //start inquirer prompts for a specific array of Qs
   inquirer.prompt(arr)
 
+    //then push the answers to the array of group members  
     .then((teamMember) => {
 
       group.push(teamMember);
 
+      //defining what will happen next  based on last prompt 
       if (teamMember.nextStep === 'Add Engineer') {
-        ask(addEngineer);
+        runPrompts(addEngineer);
+
       } else if (teamMember.nextStep === 'Add Intern') {
-        ask(addIntern);
+        runPrompts(addIntern);
+
       } else {
+        //if finish is selected run create Profiles function runs 
         createProfiles(group);
       }
     })
@@ -143,6 +150,7 @@ function ask(arr) {
 
 function createProfiles(group) {
 
+//takes in group array info and defines each of the individuals as a new team member  
   const profiles = group.map((teamMember) => {
     const {
       name,
@@ -152,7 +160,7 @@ function createProfiles(group) {
 
 
 
-
+    //defining what class each teamMember is with last input
     if (teamMember.hasOwnProperty('officeNumber')) {
       const {
         officeNumber
@@ -190,6 +198,8 @@ function generateHtml(profiles) {
 
 
   profiles.forEach((profile) => {
+    //this function adds the specific cards for each team member depending on catagory 
+
     if (profile instanceof Manager) {
 
       const card = ManagerCard(profile);
@@ -207,7 +217,7 @@ function generateHtml(profiles) {
   })
 
 
-  const newHtml = WrapperHTML(profileCards);
+  const newHtml = HeaderFooterHTML(profileCards);
 
   writeHtml(newHtml);
 };
@@ -216,11 +226,11 @@ function generateHtml(profiles) {
 
 
 
-
+//writes new file and puts the new file within the dis folder 
 
 function writeHtml(newHtml) {
   fs.writeFile('./dist/group-profile.html', newHtml, (err) => {
     if (err) throw err;
-    console.log('HTML document successfully created in the /dist folder.');
+    console.log('HTML created and in the ./dist folder.');
   });
 };
