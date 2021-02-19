@@ -43,7 +43,68 @@ const addManager = [
     {
         type: 'list',
         message: "What is the Manager's Office Number?",
+        choices: ['Add Engineer', 'Add Intern', 'Finish'],
+        name: 'nextStep'
+      },
+    
+      
+];
+const addIntern = [
+    {
+        type: 'input',
+        message: "What is the Manager's Name?",
+        name: 'name'
+      },
+    {
+        type: 'input',
+        message: "What is the Manager's ID Number?",
+        name: 'id'
+      },
+    {
+        type: 'input',
+        message: "What is the Manager's Email Address?",
         name: 'email'
+      },
+    {
+        type: 'input',
+        message: "What is the Manager's Office Number?",
+        name: 'email'
+      },
+    {
+        type: 'list',
+        message: "What is the Manager's Office Number?",
+        choices: ['Add Engineer', 'Add Intern', 'Finish'],
+        name: 'nextStep'
+      },
+    
+      
+];
+const addEngineer = [
+    {
+        type: 'input',
+        message: "What is the Manager's Name?",
+        name: 'name'
+      },
+    {
+        type: 'input',
+        message: "What is the Manager's ID Number?",
+        name: 'id'
+      },
+    {
+        type: 'input',
+        message: "What is the Manager's Email Address?",
+        name: 'email'
+      },
+    {
+        type: 'input',
+        message: "What is the Manager's Office Number?",
+        name: 'email'
+      },
+    {
+        type: 'list',
+        message: "What is the Manager's Office Number?",
+        choices: ['Add Engineer', 'Add Intern', 'Finish'],
+        name: 'nextStep'
       },
     
       
