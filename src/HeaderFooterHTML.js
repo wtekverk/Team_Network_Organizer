@@ -21,8 +21,10 @@ const HeaderFooterHTML = (cards) =>
     </nav>
 
     <div class="container">
+    <div class="row">
 
         ${cards}
+    </div>
     </div>
 
 

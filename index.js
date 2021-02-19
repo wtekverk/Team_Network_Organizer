@@ -15,7 +15,7 @@ const WrapperHTML = require('./src/HeaderFooterHTML');
 const ManagerCard = require('./src/ManagerCard');
 const EngineerCard = require('./src/EngineerCard');
 const InternCard = require('./src/InternCard');
-const HeaderFooterHTML = require('./src/HeaderFooterHTML');
+
 
 
 
@@ -124,9 +124,9 @@ function ask(questionArr) {
 
       group.push(teamMember);
 
-      if (teamMember.upNext === 'Add Engineer') {
+      if (teamMember.nextStep === 'Add Engineer') {
         ask(addEngineer);
-      } else if (teamMember.upNext === 'Add Intern') {
+      } else if (teamMember.nextStep === 'Add Intern') {
         ask(addIntern);
       } else {
         createProfiles(group);
@@ -183,14 +183,23 @@ function createProfiles(group) {
 }
 
 function generateHtml(profiles) {
+
+
   let profileCards = '';
+
+
+
   profiles.forEach((profile) => {
     if (profile instanceof Manager) {
+
       const card = ManagerCard(profile);
       profileCards += card;
+
     } else if (profile instanceof Intern) {
+
       const card = InternCard(profile);
       profileCards += card;
+
     } else if (profile instanceof Engineer) {
       const card = EngineerCard(profile);
       profileCards += card;
