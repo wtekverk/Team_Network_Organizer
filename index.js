@@ -116,9 +116,9 @@ const addEngineer = [{
 ask(addManager);
 
 
-function ask(questionArr) {
+function ask(arr) {
 
-  inquirer.prompt(questionArr)
+  inquirer.prompt(arr)
 
     .then((teamMember) => {
 

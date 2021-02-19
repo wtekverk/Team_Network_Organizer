@@ -1,5 +1,5 @@
-const HeaderFooterHTML = (cards) => 
-`<!DOCTYPE html>
+const HeaderFooterHTML = (cards) =>
+    `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,13 +10,13 @@ const HeaderFooterHTML = (cards) =>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Team Organizer</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-secondary">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Team Organizer Page</span>
+            <span class="navbar-brand mb-0 h1">Team Organizer</span>
         </div>
     </nav>
 
@@ -26,7 +26,11 @@ const HeaderFooterHTML = (cards) =>
         ${cards}
     </div>
     </div>
-
+    <nav class="navbar fixed-bottom navbar-dark bg-secondary">
+    <div class="container-fluid">
+      
+    </div>
+  </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">

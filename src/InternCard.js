@@ -1,6 +1,6 @@
 const InternCard = (profile) => `
 
-<div class="card" style="width: 18rem;">
+<div class="card p-0 m-4" style="width: 18rem;">
   <div class="card-header bi bi-book">
   <h2>${profile.getName()}</h2>
 
@@ -10,10 +10,10 @@ const InternCard = (profile) => `
 </svg>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">${profile.getName()}</li>
-    <li class="list-group-item">${profile.getId()}</li>
+    
+    <li class="list-group-item">ID: ${profile.getId()}</li>
     <li class="list-group-item">Email: <a href="mailto: ${profile.getEmail()}">${profile.getEmail()}</a></li>
-    <li class="list-group-item">${profile.getSchool()}</li>
+    <li class="list-group-item">School: ${profile.getSchool()}</li>
   </ul>
 </div>`
 

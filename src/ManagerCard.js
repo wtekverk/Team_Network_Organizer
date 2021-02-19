@@ -1,6 +1,6 @@
 const ManagerCard = (profile) => `
 
-<div class="card" style="width: 18rem;">
+<div class="card p-0 m-4" style="width: 18rem;">
   <div class="card-header bi bi-vector-pen" >
   <h2>${profile.getName()}</h2>
 
