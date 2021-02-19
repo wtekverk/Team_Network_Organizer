@@ -22,34 +22,31 @@ const InternCard = require('./src/InternCard');
 const addManager = [
     {
         type: 'input',
-        message: 'What is '
+        message: "What is the Manager's Name?",
+        name: 'name'
       },
-      {
-        name: 'name',
+    {
         type: 'input',
-        message: 'Please enter the name of the manager:'
+        message: "What is the Manager's ID Number?",
+        name: 'id'
       },
-      {
-        name: 'id',
+    {
         type: 'input',
-        message: 'What is your employee ID?'
+        message: "What is the Manager's Email Address?",
+        name: 'email'
       },
-      {
-        name: 'email',
+    {
         type: 'input',
-        message: 'Please enter your email address:'
+        message: "What is the Manager's Office Number?",
+        name: 'email'
       },
-      {
-        name: 'officeNumber',
-        type: 'input',
-        message: 'What is your office number?'
-      },
-      {
-        name: 'upNext',
+    {
         type: 'list',
-        choices: ['Add Engineer', 'Add Intern', 'My team is complete!'],
-        message: 'What would you like to do next?',
+        message: "What is the Manager's Office Number?",
+        name: 'email'
       },
+    
+      
 ];
 
 
